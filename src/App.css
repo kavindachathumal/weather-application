@@ -1,38 +1,106 @@
+.overlay {
+  position: absolute;
+  top: 50%; /* Adjust vertical position */
+  left: 50%; /* Adjust horizontal position */
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center; /* Center the text horizontally */
+  color: #fff; /* Text color */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url('/public/images/clouds.jpg'); /* Absolute path from the root */
+  background-size: cover; /* Adjust to fit your layout */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Keep the background fixed */
+  background-color: #005c7a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center; /* Vertically center align elements */
+  justify-content: center; /* Horizontally center align elements */
+  margin: 20px 0; /* Add some spacing around the elements */
+  color: #fff;
+}
+
+.cardStyle {
+  width: 500px; /* Set the desired width */
+  margin: 0 auto; /* Center the card horizontally */
+  background-color: #383b47;
+  color: #fff;
+}
+
+.row img {
+  width: 35px; /* Adjust the width as needed */
+  height: 35px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+
+.headerStyle {
+  background-color: #add8e6;
+  padding-left: 10px;
   color: white;
+  background-image: url('/public/images/clouds.jpg'); /* Absolute path from the root */
+};
+
+.contentStyle {
+  background-color: #440303;
+  color: white;
+};
+
+.weather-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.border-right {
+  border-right: 1px solid #6d6565; /* Adjust the color and width as needed */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #383b47;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .cardStyle {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .headerStyle, .contentStyle {
+    padding: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .border-right {
+    border-right: none;
   }
 }
